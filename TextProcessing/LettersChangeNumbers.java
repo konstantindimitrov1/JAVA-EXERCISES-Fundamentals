@@ -1,6 +1,4 @@
 import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.math.RoundingMode;
 import java.util.Scanner;
 
 public class LettersChangeNumbers {
@@ -11,12 +9,12 @@ public class LettersChangeNumbers {
 
         BigDecimal sum = new BigDecimal("0");
 
-        for (int i = 0; i < input.length; i++) {
-            String firstLetter = String.valueOf(input[i].charAt(0));
-            String lastLetter = String.valueOf(input[i].charAt(input[i].length() - 1));
+        for (String s : input) {
+            String firstLetter = String.valueOf(s.charAt(0));
+            String lastLetter = String.valueOf(s.charAt(s.length() - 1));
             int getFirstLetterPosition = firstLetter.toLowerCase().charAt(0) - 96;
             int getLastLetterPosition = lastLetter.toLowerCase().charAt(0) - 96;
-            BigDecimal number = new BigDecimal(input[i].substring(1, input[i].length() - 1));
+            BigDecimal number = new BigDecimal(s.substring(1, s.length() - 1));
 
             if (Character.isLowerCase(firstLetter.charAt(0))) {
                 number = number.multiply(BigDecimal.valueOf(getFirstLetterPosition));
