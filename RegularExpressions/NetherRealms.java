@@ -34,6 +34,7 @@ public class NetherRealms {
             while (matcherForDivide.find()) {
                 demonDMG /= 2;
             }
+
             System.out.printf("%s - %d health, %.2f damage\n", demon, demonHP, demonDMG);
         }
     }
