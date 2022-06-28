@@ -1,2 +1,2 @@
 # Java-Exercises
-My java exercises from my education in SoftUni.
+Java exercises from my education in SoftUni.
